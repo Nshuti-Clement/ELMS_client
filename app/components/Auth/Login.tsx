@@ -1,11 +1,11 @@
 "use client";
 import React, { FC, useEffect, useState } from "react";
+import { AiFillLinkedin } from 'react-icons/ai';
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import {
   AiOutlineEye,
   AiOutlineEyeInvisible,
-  AiFillGithub,
 } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
 import { styles } from "../../../app/styles/style";
@@ -54,6 +54,14 @@ const Login: FC<Props> = ({ setRoute, setOpen,refetch }) => {
   const { errors, touched, values, handleChange, handleSubmit } = formik;
 
   return (
+    <div className="flex flex-col items-center justify-center h-screen">
+    {/* Logo */}
+    <img
+      src="../public/assests/Healthedu_Logo.png" // Replace with the actual path to your logo
+      alt="Logo"
+      className="mb-4"
+      style={{ width: '100px', height: '100px' }}
+    />
     <div className="w-full">
       <h1 className={`${styles.title}`}>Login with Healthedu_ELearning</h1>
       <form onSubmit={handleSubmit}>
@@ -66,7 +74,7 @@ const Login: FC<Props> = ({ setRoute, setOpen,refetch }) => {
           value={values.email}
           onChange={handleChange}
           id="email"
-          placeholder="loginmail@gmail.com"
+          placeholder="samplemail@gmail.com"
           className={`${errors.email && touched.email && "border-red-500"} ${
             styles.input
           }`}
@@ -117,7 +125,7 @@ const Login: FC<Props> = ({ setRoute, setOpen,refetch }) => {
           <FcGoogle size={30} className="cursor-pointer mr-2"
           onClick={() => signIn("google")}
           />
-          <AiFillGithub size={30} className="cursor-pointer ml-2" onClick={() => signIn("github")} />
+          <AiFillLinkedin size={30} className="cursor-pointer ml-2" onClick={() => signIn("linkedin")} />
         </div>
         <h5 className="text-center pt-4 font-Poppins text-[14px]">
           Not have any account?{" "}
@@ -130,6 +138,7 @@ const Login: FC<Props> = ({ setRoute, setOpen,refetch }) => {
         </h5>
       </form>
       <br />
+    </div>
     </div>
   );
 };
