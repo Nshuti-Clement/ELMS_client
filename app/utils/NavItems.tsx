@@ -13,6 +13,13 @@ export const navItemsData = [
   {
     name: "About",
     url: "/about",
+    dropdownItems: [
+      { name: "Our Team", url: "/about/team" },
+      { name: "Instructors", url: "/about/instructors" },
+      { name: "Number of Uploaded Courses", url: "/about/uploaded-courses" },
+      { name: "Achieved Milestones", url: "/about/milestones" },
+      { name: "Gallery", url: "/about/gallery" },
+    ],
   },
   {
     name: "Policy",
