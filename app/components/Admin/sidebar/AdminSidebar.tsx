@@ -1,9 +1,9 @@
 "use client";
-import 'react-pro-sidebar/dist/css/sidebar.css';
+import 'react-pro-sidebar/dist/esm/sidebar.css';
+import 'react-pro-sidebar/dist/esm/styles.css';
 import { FC, useEffect, useState } from "react";
 import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
 import { Box, IconButton, Typography } from "@mui/material";
-import "react-pro-sidebar/dist/css/styles.css";
 import {
   HomeOutlinedIcon,
   ArrowForwardIosIcon,
